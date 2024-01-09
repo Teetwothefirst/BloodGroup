@@ -54,32 +54,7 @@ async function writeToHealthData(){
   const ageArray = [22,29,45,67,80,12,5,6,7,10]
   const agerandomizer = Math.floor(Math.random() * ageArray.length)
   
-  // for (let i = 0; i <=20 ; i++){
-  //   const personData = {
-  //     name : `person ${i}`,
-  //     bloodGroup: bloodGroupArray[bGArandomizer],
-  //     age: ageArray[agerandomizer],
-  //   };
-  //   try{
-  //     const docRef = await addDoc(healthData).add(personData);
-  //     console.log(`Document was added with ID ${docRef.id}`)
-  //   }
-  //   catch (error){
-  //     console.log('Error Loding Page :', error);
-  //   }
-  // }
-    // const docData = [{
-    //   name: 'Adedokun Silas',
-    //   age : 24,
-    //   bloodGroup : 'A',
-    // },
-    // {
-    //   name: 'Adetide lucas',
-    //   age : 27,
-    //   bloodGroup : 'AB',
-    // },
-    // ];
-    // setDoc(healthData, docData)
+
     for (let i=0; i<20; i++){
     await setDoc(doc(healthData, `Person ${i}`), {
       name : `person ${i}`,
