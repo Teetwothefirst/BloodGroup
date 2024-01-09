@@ -1,0 +1,74 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: rgb(168, 240, 187) !important;
+}
+
+/* Code for Blob top-right */
+.blobSetup{
+    position: fixed;
+    top: -12%;
+    right: -14%;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+}
+.blobSetup img{
+    width: 100%;
+    height: auto;
+}
+
+.blobSetupBottom{
+    position: fixed;
+    bottom: -12%;
+    left: -14%;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+}
+.blobSetupBottom img{
+    width: 100%;
+    height: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .blobSetup {
+        width: 30%; /* Adjust for smaller screens */
+        max-width: 150px; /* Set a maximum width for smaller screens */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .blobSetup {
+        display: none; /* Hide the blob on very small screens if necessary */
+    }
+}
+
+/* CSS Styling typing text */
+.typewriter {
+    text-align: center;
+  }
+  
+  #typing-text {
+    font-family: "Arial", sans-serif;
+    font-size: 24px;
+    color: white;
+    overflow: hidden;
+    /*   border-right: 0.15em solid #333; */
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.1em;
+    animation: typing 3s steps(40) 1s 1 normal both;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
