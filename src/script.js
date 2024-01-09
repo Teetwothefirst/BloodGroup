@@ -124,7 +124,6 @@ Highcharts.chart('containerChart', {
 writeToHealthData()
 queryForDocument()
 RetrieveFromStorage()
-console.log('Let\'s get this party started');
-
-// Create the chart
-//Highcharts.chart('container', { /*Highcharts options*/ });
+ setTimeout(function() {
+        location.reload();
+    }, 2000);
