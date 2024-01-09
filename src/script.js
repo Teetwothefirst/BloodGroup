@@ -99,7 +99,10 @@ ReturnToData.forEach(item => {
 //   name: bloodGroup,
 //   data: processedData[bloodGroup]
 // }));
-
+const seriesData = ['O', 'A', 'B', 'AB'].map(bloodGroup => ({
+  name: bloodGroup,
+  data: processedData[bloodGroup] || [] // Default to an empty array if blood group not present
+}));
 // Create the Highcharts chart
 Highcharts.chart('containerChart', {
   chart: {
@@ -109,7 +112,8 @@ Highcharts.chart('containerChart', {
     text: 'Stacked Ages by Blood Group'
   },
   xAxis: {
-    categories: Array.from(new Set(ReturnToData.map(item => item.bloodGroup)))
+    //categories: Array.from(new Set(ReturnToData.map(item => item.bloodGroup)))
+    categories: ['O', 'A', 'B', 'AB']
   },
   yAxis: {
     title: {
